@@ -1,0 +1,57 @@
+
+
+
+<html>
+  <head>
+
+  </head>
+  <body>
+    <h1 >Empleados</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>correo</th>
+                <th>Telefono</th>
+                <th>Tipo documento</th>
+                <th>numeroDocumento</th>
+                <th>idCargo</th>
+                <th>idVinculacion</th>
+                <th>idHorario</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            {% for x in empleado %}
+
+            <tr>
+                <td>{{x.nombre}}</td>
+                <td>{{x.apellido}}</td>
+                <td>{{x.correo}}</td>
+                <td>{{x.telefono}}</td>
+                <td>{{x.tipoDocumento}}</td>
+                <td>{{x.numeroDocumento}}</td>
+                <td>{{x.idCargo}}</td>
+                <td>{{x.idVinculacion}}</td>
+                <td>{{x.idHorario}}</td>
+
+
+            </tr>
+          
+            
+            
+
+            {%endfor%}
+          
+            
+
+
+
+
+            
+        </tbody>
+    </table>
+</body>
+</html>
+

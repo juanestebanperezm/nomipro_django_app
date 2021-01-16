@@ -1,0 +1,40 @@
+ {% extends "NomiproApp/base.html" %} {% load static %} {% block content %}
+
+<!-- Heading -->
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'NomiproApp/img/principal1.jpg' %}" alt="">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Gestiona tu nómina</span>
+                    <span class="section-heading-lower">NOMIPRO</span>
+                </h2>
+                <p class="mb-3">Maneja de forma más ágil y eficiente la nómina de los empleados de tu empresa y optimiza tu tiempo!
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Message -->
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Manejo de Nómina</span>
+                        <span class="section-heading-lower">Efectivo</span>
+                    </h2>
+                    <p class="mb-0">El software NOMIPRO está diseñado para permitirle a las empresas llevar un registro detallado de sus empleados; además, calcula la nómina de manera rápida y segura lo que garantiza a la empresa reportes limpios sin mucho esfuerzo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

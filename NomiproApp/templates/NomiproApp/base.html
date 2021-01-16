@@ -1,0 +1,132 @@
+<html>
+
+<head>
+
+    {% load static %}
+
+    <!-- Bootstrap -->
+    <link href="{% static 'NomiproApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link href="{% static 'NomiproApp/css/gestion.css' %}" rel="stylesheet">
+    <link href="{% static 'NomiproApp/css/stylee.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+
+        <span class="site-heading-lower">NOMIPRO</span>
+    </h1>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="home.html">Gestión de Pedidos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li>
+                        <img src="{% static 'NomiproApp/img/logo1.png' %}" alt="" width="20%">
+                    </li>
+
+                    <li class="nav-item {% if request.path == '/' %}active{% endif %} px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'inicio' %}">Inicio</a>
+                    </li>
+
+                    <li class="dropdown nav-item px-lg-4">
+                        <a class="dropdown-toggle nav-link text-uppercase text-expanded" data-toggle="dropdown" href="#">
+                            Gestión de Empleados
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item px-lg-4"><a href="{% url 'empleados' %}">Empleados</a></li>
+                            <li class="nav-item px-lg-4"><a href="{% url 'cargos' %}">Cargos</a></li>
+                            <li class="nav-item px-lg-4"><a href="{% url 'vinculaciones' %}">Vinculación</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown nav-item px-lg-4">
+                        <a class="dropdown-toggle nav-link text-uppercase text-expanded" data-toggle="dropdown" href="#">
+                            Gestión de Tiempo
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item px-lg-4"><a href="{% url 'horarios' %}">Horarios</a></li>
+                            <li class="nav-item px-lg-4"><a href="{% url 'parafiscales' %}">Parafiscales</a></li>
+                            <li class="nav-item px-lg-4"><a href="{% url 'extras' %}">Horas Extra</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown nav-item px-lg-4">
+                        <a class="dropdown-toggle nav-link text-uppercase text-expanded" data-toggle="dropdown" href="#">
+                            Gestión de Nómina
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item px-lg-4"><a href="{% url 'control_Pago' %}">Control Pago</a></li>
+                            <li class="nav-item px-lg-4"><a href="{% url 'nomina' %}">Nómina</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Contenido -->
+    {% block content %} {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer text-faded text-center py-5">
+        <div class="container">
+            <p class="m-0">
+                <a href="#" class="link">
+                    <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	          </span>
+                </a>
+                <a href="#" class="link">
+                    <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	          </span>
+                </a>
+                <a href="#" class="link">
+                    <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+	          </span>
+                </a>
+            </p>
+            <p class="m-0 mbt">
+                <a href="sample.html" class="link">Política de privacidad</a> ·
+                <a href="sample.html" class="link">Aviso legal</a> ·
+                <a href="sample.html" class="link">Cookies</a>
+            </p>
+            <p class="m-0 mbt1">&copy; NOMIPRO 2020</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'NomiproApp/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'NomiproApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+
+</html>
